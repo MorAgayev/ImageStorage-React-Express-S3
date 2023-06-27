@@ -9,10 +9,12 @@ const PORT = process.env.PORT || 3000
 const app = express()
 const storage = memoryStorage()
 const upload = multer({storage})
+const path = require('path')
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors())
+app.use(express.static(path.join(__dirname, './frontend/dist')))
 
 app.get('/images', async (req, res) => {
     const userId = req.headers['x-user-id']
