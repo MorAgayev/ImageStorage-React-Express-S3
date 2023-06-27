@@ -16,13 +16,6 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static(path.join(__dirname, './frontend/dist')))
 
-app.get('*', function (_, res) {
-  res.sendFile(path.join(__dirname, './frontend/dist/index.html'),
-  (error)=> {
-    if(error) res.status(500).send(err)
-  })
-})
-
 
 app.get('/images', async (req, res) => {
     const userId = req.headers['x-user-id']
