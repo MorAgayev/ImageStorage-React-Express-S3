@@ -1,0 +1,12 @@
+@import "react-image-gallery/styles/scss/image-gallery.scss";
+
+//BASE
+@import './base/variables';
+@import './base/typography';
+@import './base/helpers';
+@import './base/base';
+
+//COMPONENTS
+@import './components/_Profile';
+@import './components/UploadButton';
+@import './components/ImagesList';

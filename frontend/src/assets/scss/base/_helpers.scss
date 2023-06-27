@@ -1,0 +1,155 @@
+.container {
+    max-width: 968px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 6.5rem 0 1rem;
+    }
+
+    .section__title {
+        margin-bottom: 3.5rem;
+    }
+
+    .nav {
+        height: calc($header-height + 1rem);
+    }
+}
+  
+.grid {
+    display: grid;
+    gap: 1.25rem;
+}
+  
+.main {
+    overflow: hidden;
+}
+  
+.section {
+    padding: 4.5rem 0 1rem;
+}
+  
+.section__title, 
+.section__subtitle {
+    text-align: center;
+}
+  
+.section__title {
+    font-size: $h2-font-size;
+    color: $first-color;
+    margin-bottom: 2rem;
+}
+  
+.section__subtitle {
+    display: block;
+    font-size: $smaller-font-size;
+    color: $text-color-light;
+}
+
+
+
+// BUTTONS 
+.button {
+    display: inline-block;
+    background-color: $first-color;
+    color: $body-color;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    font-weight: $font-medium;
+    transition: .4s;
+
+    &:hover {
+        background-color: $first-color-alt;
+        color: $body-color
+    }
+}
+
+.button--ghost {
+    background-color: transparent;
+    border: 2px solid $first-color;
+    color: $first-color;
+}
+
+
+// horizontal line
+.horizontal__line {
+    height: 1px;
+    width: 100%;
+    background-color: $text-color;
+    filter: brightness(.7);
+}
+
+//MODAL
+.main__modal {
+    overflow-y: hidden !important;
+    position: fixed;
+    inset: 0;
+    background-color: hsla($second-hue, 28%, 16%, .7);
+    padding: 2rem 1rem;
+    display: grid;
+    place-items: center;
+    transition: .4s;
+    z-index: $z-modal;
+
+    .main__modal-content {
+        overflow-y: auto;
+        position: relative;
+        background-color: $body-color;
+        padding: 4.5rem 1.5rem 2.5rem;
+        border-radius: 1.5rem;
+        max-height: 100%;
+        max-width: 920px;
+    }
+
+    .main__modal-close {
+        position: absolute;
+        top: 2.15rem;
+
+        .main__modal-close-icon {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+//CARDS
+.img__card {
+    background-color: $container-color;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    .img__card-img {
+        border-radius: 1rem;
+        margin-bottom: .75rem;
+    }
+
+    .img__card-title {
+        font-size: $normal-font-size;
+        font-weight: $font-medium;
+        margin-bottom: .25rem;
+    }
+
+    .img__card-button {
+        width: max-content;
+        color: $first-color;
+        font-size: $small-font-size;
+        display: flex;
+        align-items: center;
+        column-gap: .25rem;
+    }
+
+    .img__card-button:hover .work__icon {
+        transform: translateX(.25rem);
+    }
+
+    .img__card-icon {
+        font-size: 1rem;
+        transition: .4s;
+    }
+}
